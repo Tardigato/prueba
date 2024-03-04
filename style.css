@@ -1,0 +1,111 @@
+#lienzo {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: #f0f0f0;
+    margin: 50px auto;
+    cursor: crosshair;
+    border: 3px solid black;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.nodo {
+    width: 40px;
+    height: 40px;
+    background-color: #47ff94;
+    color: #000000;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    margin: 5px;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+
+.line {
+    position: absolute;
+    background-color: black;
+    z-index: 0;
+    height: 2px;
+}
+
+.arrowhead {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 12px;
+    border-color: transparent transparent transparent black;
+    transform-origin: 100% 50%;
+}
+
+.arista-label {
+    font-size: 12px;
+    color: black;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    background-color: #f0f0f0;
+    padding: 1px;
+}
+
+.overlay-container {
+    position: relative;
+}
+
+.button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.button-container button {
+    height: 50px;
+    width: 150px;
+    margin-bottom: 15px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: 2px solid #2980b9;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.matriz-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.matriz-adyacencia {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.matriz-adyacencia th, .matriz-adyacencia td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.matriz-adyacencia th {
+    background-color: #f2f2f2;
+}
+
+.matriz-adyacencia td {
+    background-color: #ffffff;
+}
